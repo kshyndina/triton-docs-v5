@@ -60,7 +60,20 @@ The same endpoint serves every protocol on that chain:
 
 ## When to pin a region
 
-Anycast to the nearest PoP is the right default for most workloads. To pin your traffic to a specific region or data centre, contact support, and we'll point your endpoint there.
+Anycast to the nearest city (the default) is right for most workloads. If you want to send transactions from multiple regions at the same time or benchmark a specific data centre, you can also pin the region in your request.
+
+To connect directly to a region, replace your endpoint's subdomain with a city code. Your existing token works as is:
+
+```
+https://<city-code>.rpcpool.com/<your-token>
+```
+
+| Region | City codes                                                                    |
+| ------ | ----------------------------------------------------------------------------- |
+| US     | `slc` (Salt Lake City), `dal` (Dallas), `nyc` (New York), `pit` (Pittsburgh) |
+| EU     | `ams` (Amsterdam), `fra` (Frankfurt), `lon` (London), `dub` (Dublin)         |
+
+A direct regional connection bypasses the load balancer, so you give up the automatic failover between the regions the default endpoint provides. To pin your named endpoint to a region permanently instead of adding a city code, contact support and we'll point it there.
 
 **Fumarole is addressed by region directly.** Connect to `ams.rpcpool.com` (Europe) or `nyc.rpcpool.com` (US). Its subscriptions are region-stateful and do not carry across regions.
 

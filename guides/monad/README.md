@@ -4,7 +4,7 @@ description: Official Monad guides from Monad Labs, from first deploy through in
 
 # Guides by Monad Labs
 
-Building on Monad? These official guides from Monad Labs take you from your first deploy through indexing. Monad is EVM-compatible, so your existing Ethereum tooling works.
+Monad is EVM-compatible, so your existing Ethereum tooling works. These guides from Monad Labs take you from your first deploy through indexing.
 
 1. Deploy a contract from the browser, no local setup: [**deploy with Remix**](https://docs.monad.xyz/guides/deploy-smart-contract/remix)
 2. Deploy using the Foundry toolchain: [**deploy with Foundry**](https://docs.monad.xyz/guides/deploy-smart-contract/foundry)

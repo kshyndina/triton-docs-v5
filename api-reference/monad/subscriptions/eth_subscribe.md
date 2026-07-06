@@ -6,7 +6,7 @@ description: >-
 
 # eth\_subscribe
 
-Open a push subscription over a WebSocket connection (`wss://`). Monad supports the standard `newHeads` and `logs` subscriptions, plus two speculative Monad extensions that publish roughly one second earlier than their finalized counterparts.
+Monad supports the standard `newHeads` and `logs` subscriptions over `wss://`, plus two speculative Monad extensions that publish roughly one second earlier than their finalized counterparts.
 
 ## Request
 

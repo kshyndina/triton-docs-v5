@@ -1,5 +1,5 @@
 ---
-description: Run a branded Solana validator or stake with Triton for weekly USDC pay-outs
+description: Run a branded Solana validator or stake with Triton for weekly USDC pay-outs.
 ---
 
 # Validator services

@@ -4,7 +4,7 @@ description: Stream real-time swap quotes over the Titan Swap API WebSocket.
 
 # Titan /quote
 
-Titan streams swap quotes in real time over a WebSocket, instead of REST polling. The Argos meta-aggregator sources from multiple DEX aggregators and RFQ venues, and DART (Dynamically Allocated Real-Time routing) re-optimises the trade at execution time. Connect over `wss://`, not `https://`.
+Unlike REST polling, quotes arrive as a stream: the Argos meta-aggregator sources from multiple DEX aggregators and RFQ venues, and DART (Dynamically Allocated Real-Time routing) re-optimises the trade at execution time. Connect over `wss://`, not `https://`.
 
 ## Connect
 

@@ -4,7 +4,7 @@ description: Stream Solana transactions reconstructed from shreds before the nod
 
 # Deshred Transactions gRPC
 
-Deshred is a separate gRPC method on the Yellowstone gRPC service, same as Dragon's Mouth. It delivers transactions reconstructed from shreds before the node executes them.
+Deshred is a separate gRPC method on the Yellowstone gRPC service, same as Dragon's Mouth.
 
 ## Use cases
 

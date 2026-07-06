@@ -6,7 +6,7 @@ description: >-
 
 # transactionSubscribe
 
-A Triton extension: the standard Solana WebSocket API does not support transaction subscriptions. Stream transactions matching a filter over Whirligig, connecting with `wss://`.
+The standard Solana WebSocket API does not support transaction subscriptions; Whirligig adds this method. Stream transactions matching a filter, connecting with `wss://`.
 
 The method takes two arguments: a `filter` (all fields optional) and a `config`.
 

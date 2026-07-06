@@ -1,5 +1,5 @@
 ---
-description: Send a Solana transaction two ways, with /sendtx, the direct HTTP submission endpoint, and with standard sendTransaction.
+description: Send your first Solana transaction through a Triton endpoint.
 layout:
   pagination:
     visible: true

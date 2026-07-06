@@ -1,5 +1,5 @@
 ---
-description: Query Solana NFTs, compressed NFTs, and fungible tokens through the Metaplex Digital Asset Standard API.
+description: The Metaplex Digital Asset Standard API, served on all Triton endpoints.
 layout:
   width: default
   title:

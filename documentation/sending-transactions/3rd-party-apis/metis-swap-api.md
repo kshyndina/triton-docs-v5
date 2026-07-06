@@ -1,5 +1,5 @@
 ---
-description: Triton-hosted swap quoting and routing across 20+ DEXes, no staked JUP required.
+description: Integrate swaps with quotes, routing, and ready-to-sign transactions on your Triton endpoint.
 ---
 
 # Metis Swap API

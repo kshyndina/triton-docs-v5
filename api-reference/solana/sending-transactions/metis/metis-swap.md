@@ -1,5 +1,5 @@
 ---
-description: Build a signed-ready swap transaction from a Metis quote.
+description: Build a swap transaction from a Metis quote.
 ---
 
 # Metis /swap

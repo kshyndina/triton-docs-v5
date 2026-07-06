@@ -4,7 +4,7 @@ description: Benchmark Solana RPC and gRPC endpoints fairly with Triton's Thorof
 
 # Benchmark gRPC endpoints with Thorofare
 
-How to benchmark Solana RPC and Yellowstone gRPC endpoints the right way using Triton's Thorofare tool. Compare providers on like-for-like workloads, not on ping times.
+Compare providers on like-for-like workloads, not on ping times: Triton's Thorofare tool replays identical, configurable request loads against each endpoint.
 
 Most Solana RPC benchmarks are misleading. They measure ping or one cherry-picked method, then publish numbers that don't reflect real workloads. **Thorofare** is the tool we built to benchmark the way that actually matters: realistic request mixes, realistic concurrency, and metrics that match what your application sees.
 

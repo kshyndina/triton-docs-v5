@@ -1,7 +1,5 @@
 ---
-description: >-
-  Get a swap route and quote from the Metis Swap API, Triton's hosted
-  Jupiter routing engine.
+description: Get a swap route and quote from the Metis Swap API.
 ---
 
 # Metis /quote

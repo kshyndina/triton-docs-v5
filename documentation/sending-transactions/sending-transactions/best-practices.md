@@ -20,7 +20,7 @@ description: Patterns for landing Solana transactions reliably under congestion.
 
 ## Route through staked validators (SWQoS)
 
-* **Nothing to enable: SWQoS is applied on every Triton endpoint by default, at no extra cost.** Your sends travel the reserved private connection pools of staked validators instead of the congested public TPU ports, raising delivery success.
+* **Nothing to enable: SWQoS is applied on every Triton endpoint by default, at no extra cost.** Your transactions are sent through the stake we manage, instead of unstaked connections, which raises landing rates under congestion.
 
 ## Handle retries yourself
 

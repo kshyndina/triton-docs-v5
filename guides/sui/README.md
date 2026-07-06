@@ -4,8 +4,6 @@ description: Official Sui guides from Mysten Labs, from first setup to full appl
 
 # Guides by Mysten Labs
 
-These guides from Mysten Labs take you from first setup to full applications on Sui.
-
 1. Get the toolchain on your machine: [**install the Sui CLI**](https://docs.sui.io/getting-started/onboarding/install-binaries)
 2. Connect to a network and set up your keys: [**configure the Sui client**](https://docs.sui.io/getting-started/onboarding/configure-sui-client)
 3. Fund a devnet or testnet address: [**get test SUI from the faucet**](https://docs.sui.io/getting-started/onboarding/get-coins)

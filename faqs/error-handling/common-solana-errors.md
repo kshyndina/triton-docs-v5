@@ -6,7 +6,7 @@ description: Common Solana JSON-RPC error codes with fixes.
 
 ## Common Solana JSON-RPC codes
 
-This is a standard list of common JSON-RPC error codes you may experience. For a comprehensive list, please refer to [Anza's kit repository](https://github.com/anza-xyz/kit).
+For a comprehensive list, see [Anza's kit repository](https://github.com/anza-xyz/kit).
 
 | Error code | Suggested action                                                                                                                                         |
 | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |

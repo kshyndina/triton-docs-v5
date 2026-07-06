@@ -539,7 +539,7 @@ Due to a quirk in how Geyser works on Solana (fixed in `master`), not every fina
 
 ## Keep-alive pings
 
-Some cloud providers (for example Cloudflare) close idle streams. Send periodic pings to keep the connection open; the server responds with a `pong` every 15 seconds.
+Some cloud providers (for example Cloudflare) close idle streams. Send periodic pings to keep the connection open; the server replies to each with a `pong`, and also sends its own `ping` update every \~10 seconds to detect dead clients.
 
 ```typescript
 const PING_INTERVAL_MILLISECONDS = 30000;

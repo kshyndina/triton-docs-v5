@@ -89,6 +89,10 @@ cargo install yellowstone-fumarole-cli
 ```toml
 [dependencies]
 yellowstone-fumarole-client = "0.6"
+yellowstone-grpc-proto = "12"
+tokio = { version = "1", features = ["full"] }
+futures = "0.3"
+serde_yaml = "0.9"
 ```
 {% endtab %}
 
@@ -96,6 +100,8 @@ yellowstone-fumarole-client = "0.6"
 ```bash
 npm install @triton-one/yellowstone-fumarole
 ```
+
+The package is ESM-only, so `"type": "module"` is required in your `package.json`; run with `npx ts-node --esm main.ts`.
 {% endtab %}
 {% endtabs %}
 
@@ -111,11 +117,10 @@ use yellowstone_grpc_proto::geyser::{SubscribeRequest, SubscribeRequestFilterTra
 
 #[tokio::main]
 async fn main() {
-    let config = FumaroleConfig {
-        endpoint: "https://ams.rpcpool.com".to_string(),
-        x_token: Some("<your-token>".to_string()),
-        ..Default::default()
-    };
+    let config: FumaroleConfig = serde_yaml::from_str(
+        "endpoint: https://ams.rpcpool.com\nx-token: <your-token>",
+    )
+    .expect("config");
 
     let mut client = FumaroleClient::connect(config).await.expect("connect");
 
@@ -183,6 +188,8 @@ const { source } = await client.dragonsmouthSubscribeWithConfig(subscriberName, 
 
 await source.forEach((update) => console.log(update));
 ```
+
+`createPersistentSubscriber` errors if the name already exists: on reconnect, skip it and call `dragonsmouthSubscribeWithConfig` directly to resume from the cursor.
 {% endtab %}
 {% endtabs %}
 

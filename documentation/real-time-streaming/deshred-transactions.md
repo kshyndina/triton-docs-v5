@@ -70,6 +70,7 @@ stream.on("data", (data) => {
 });
 
 const request: SubscribeDeshredRequest = {
+  slots: {},
   deshredTransactions: {
     client: {
       vote: false,
@@ -128,7 +129,7 @@ async fn main() -> anyhow::Result<()> {
                 account_required: vec![],
             },
         )]),
-        ping: None,
+        ..Default::default()
     };
 
     let (mut tx, mut stream) =
@@ -147,7 +148,7 @@ async fn main() -> anyhow::Result<()> {
                     ..Default::default()
                 }).await?;
             }
-            Some(UpdateOneof::Pong(_)) => {}
+            Some(_) => {}
             None => break,
         }
     }

@@ -148,7 +148,7 @@ Your handler is processing events slower than they arrive. Filter more aggressiv
 
 <summary>Do I need to send keepalive pings?</summary>
 
-Sometimes. Some cloud providers (e.g. Cloudflare) close idle streams. If you see disconnections after periods of low traffic, send a periodic ping. Dragon's Mouth gRPC accepts a `ping` field on the subscribe request; Whirligig accepts `{"jsonrpc":"2.0","method":"ping"}`. The server returns a `pong` every 15 seconds, which you can use to confirm liveness.
+Sometimes. Some cloud providers (e.g. Cloudflare) close idle streams. If you see disconnections after periods of low traffic, send a periodic ping. Dragon's Mouth gRPC accepts a `ping` field on the subscribe request; Whirligig accepts `{"jsonrpc":"2.0","method":"ping"}`. The server replies to each ping with a `pong`, which you can use to confirm liveness.
 
 </details>
 

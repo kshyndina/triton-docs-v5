@@ -153,7 +153,7 @@ Run your code:
 # Standard RPC
 npx ts-node main.ts
 
-# Account Sync (ESM package — needs the --esm flag)
+# Account Sync (ESM package, needs the --esm flag)
 npx ts-node --esm main.ts
 ```
 {% endtab %}

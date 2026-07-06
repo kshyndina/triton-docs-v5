@@ -458,7 +458,7 @@ await source.forEach((update) => {
 });
 ```
 
-`createPersistentSubscriber` errors if the name already exists — on reconnect, skip it and call `dragonsmouthSubscribe` directly to resume from the cursor.
+`createPersistentSubscriber` errors if the name already exists: on reconnect, skip it and call `dragonsmouthSubscribe` directly to resume from the cursor.
 {% endtab %}
 
 {% tab title="Rust" %}

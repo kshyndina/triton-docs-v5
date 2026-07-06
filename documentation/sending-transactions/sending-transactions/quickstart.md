@@ -66,7 +66,7 @@ const res = await fetch(
   {
     method: "POST",
     headers: { "Content-Type": "application/octet-stream" },
-    body: wire,
+    body: new Uint8Array(wire),
   },
 );
 

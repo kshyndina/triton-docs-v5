@@ -62,7 +62,7 @@ The same endpoint serves every protocol on that chain:
 
 Anycast to the nearest city (the default) is right for most workloads. If you want to send transactions from multiple regions at the same time or benchmark a specific data centre, you can also pin the region in your request.
 
-To connect directly to a region, replace your endpoint's subdomain with a city code. Your existing token works as is:
+To do so, replace your endpoint's subdomain with a city code. Your existing token works as is:
 
 ```
 https://<city-code>.rpcpool.com/<your-token>

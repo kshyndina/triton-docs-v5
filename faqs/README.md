@@ -64,6 +64,14 @@ We also offer white-label setups for DAOs, custodians, stake pools, and other in
 
 </details>
 
+<details>
+
+<summary>Do you offer webhooks?</summary>
+
+No. Solana has no native webhooks, and third-party webhook services add latency and lock-in. Subscribe with Dragon's Mouth gRPC (or Vixen for pre-parsed program streams) and react to updates in your own code: it is the faster, provider-agnostic equivalent.
+
+</details>
+
 ## Getting started
 
 <details>
@@ -71,6 +79,14 @@ We also offer white-label setups for DAOs, custodians, stake pools, and other in
 <summary>How do I get a Triton account?</summary>
 
 You can self-onboard at [customers.triton.one](https://customers.triton.one/users/sign-up) in ~2 minutes. For a dedicated gRPC node or other custom requirements, [contact sales](https://triton.one/contact).
+
+</details>
+
+<details>
+
+<summary>What's included in the pay-as-you-go plan?</summary>
+
+Every service on our shared infrastructure, billed by usage from your prepaid balance: standard RPC, Yellowstone gRPC (Dragon's Mouth) and Deshred, Whirligig WebSockets, Fumarole, Cloudbreak indexes, the Digital Assets API, SWQoS transaction sending (Jet), and the Metis and Titan swap APIs. Every deposit gets the same features, there are no tiers. Devnet is free, and your credit is valid for one year. See [Plans and billing](https://app.gitbook.com/s/ACym6ZbIwDBDKhyKgDGy/plans-and-billing) for the per-service rates.
 
 </details>
 

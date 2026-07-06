@@ -74,6 +74,14 @@ Yes. Shared infrastructure handles backend workloads (scripts, trading bots, ind
 
 <details>
 
+<summary>Are rate limits applied per IP or per account?</summary>
+
+Per IP, across all our nodes. The shared default is 1,200 requests per 10 seconds per IP (`sendTransaction` is 100 per 10 seconds), and token-authenticated endpoints get a higher tier than allowed-origin ones. If you need more, we can raise shared limits on request, or a dedicated node gives you fully custom limits.
+
+</details>
+
+<details>
+
 <summary>How do I check my current rate limits?</summary>
 
 Every endpoint exposes its live limits at `/ratelimits`. Run `curl https://<your-endpoint>/<your-token>/ratelimits`. Each JSON-RPC response also carries `X-Ratelimit-*` headers (limit, remaining, reset, plus the per-method pair), so you can back off before you hit a 429. See [Rate and connection limits](https://app.gitbook.com/s/ACym6ZbIwDBDKhyKgDGy/rate-and-connection-limits).
@@ -86,7 +94,7 @@ Every endpoint exposes its live limits at `/ratelimits`. Run `curl https://<your
 
 <summary>Do you support devnet?</summary>
 
-Yes. Triton runs Solana mainnet and devnet, with full compatibility with the standard JSON-RPC and WebSocket APIs on both. Contact support from your [customer dashboard](https://customers.triton.one) to add a devnet endpoint.
+Yes. Triton runs Solana mainnet and devnet, with full compatibility with the standard JSON-RPC and WebSocket APIs on both, and devnet is free. Contact support from your [customer dashboard](https://customers.triton.one) to add a devnet endpoint.
 
 </details>
 
@@ -97,6 +105,14 @@ Yes. Triton runs Solana mainnet and devnet, with full compatibility with the sta
 Customers with dedicated nodes get a Grafana dashboard with real-time metrics: request volume, latency, error rates, and bandwidth usage.
 
 For shared (pay-as-you-go) usage, open the **v3 Billing** tab in your [customer dashboard](https://customers.triton.one) to see total requests and GB used (the two dimensions you're billed on), plus a per-service breakdown.
+
+</details>
+
+<details>
+
+<summary>Do you have a status page?</summary>
+
+There is no public status page. Dedicated-node customers get a real-time Grafana dashboard (request volume, latency, error rates); on shared, watch your usage in the [customer dashboard](https://customers.triton.one) and contact support if you suspect an endpoint issue.
 
 </details>
 
@@ -148,7 +164,7 @@ Yes, shared infrastructure includes access to the complete ledger through Superb
 
 <summary>What is Jetstreamer?</summary>
 
-Jetstreamer is the tool for bulk-backfilling large ranges of Solana history from the Old Faithful archive, with filtering and pluggable storage backends.
+Jetstreamer is the tool for bulk-backfilling large ranges of Solana history from the Old Faithful archive, with filtering and pluggable storage backends. See [Historical data best practices](https://app.gitbook.com/s/Xz3Ki4zincxsnRG91NNt/solana/historical-data/best-practices) for the full backfill guide.
 
 </details>
 
@@ -168,7 +184,7 @@ The recommended pattern is to call the Jito block engine directly for sends, and
 
 <summary>Can I optimise for a specific region?</summary>
 
-By default we use BGP Anycast to route every request to the nearest city automatically, requiring zero client-side setup. To pin your traffic to a specific region, contact support and we’ll set it up.
+By default every request (RPC, gRPC, and WebSocket) goes through our Anycast load balancers and is routed to the nearest point of presence automatically, so you get the lowest latency everywhere, with built-in redundancy and zero client-side setup. There is no region to choose. To pin your traffic to a specific region, contact support and we’ll set it up.
 
 </details>
 

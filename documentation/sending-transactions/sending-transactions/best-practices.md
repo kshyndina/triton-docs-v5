@@ -20,12 +20,8 @@ description: Patterns for landing Solana transactions reliably under congestion.
 
 ## Route through staked validators (SWQoS)
 
-* **Nothing to enable: SWQoS is applied on every Triton endpoint by default, at no extra cost.** Your transactions are sent through the stake we manage, instead of unstaked connections, which raises landing rates under congestion.
-
-## Handle retries yourself
-
-* **Do not rely on the RPC node's retry queue.** It saturates under high traffic and causes widespread failures. Send with `maxRetries: 0`, and Jet fans out retries for you.
-* **Run your own asynchronous retry loop:** re-fetch a recent blockhash and re-sign every few seconds.
+* **SWQoS transaction bandwidth is free and applied on every Triton endpoint by default: nothing to enable or request.** Your transactions are sent through the stake we manage, instead of unstaked connections, which raises landing rates under congestion.
+* **Combine with priority fees, or Jito, for more speed during contention.**
 
 ## Use `/sendtx` for latency-sensitive sends
 

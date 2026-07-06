@@ -18,10 +18,10 @@ description: Patterns for landing Solana transactions reliably under congestion.
 
 * **Simulate with `simulateTransaction()`, then send with `skipPreflight: true`.** Triton's send path has more delivery pathways for sends that skip preflight, and `skipPreflight: false` bills your send twice.
 
-## Route through staked validators (SWQoS)
+## Leverage fast lanes
 
-* **SWQoS transaction bandwidth is free and applied on every Triton endpoint by default: nothing to enable or request.** Your transactions are sent through the stake we manage, instead of unstaked connections, which raises landing rates under congestion.
-* **Combine with priority fees, or Jito, for more speed during contention.**
+* **If you're sending through Triton endpoints, SWQoS is free and applied automatically to each request: nothing to enable on your end.**
+* **Combine with competitive priority fees, or Jito, for more speed during contention.**
 
 ## Use `/sendtx` for latency-sensitive sends
 

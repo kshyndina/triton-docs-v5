@@ -51,7 +51,7 @@ The complete ledger from genesis: every block, transaction, and entry. Most Supe
 
 | Method | Returns |
 | --- | --- |
-| `getBlock`, `getBlocks`, `getBlocksWithLimit`, `getBlockTime`, `getBlockHeight`, `getSlot`, `getTransactionCount`, `getLatestBlockhash`, `getFirstAvailableBlock`, `getInflationReward`, `getSignatureStatuses`, `getHealth`, `minimumLedgerSlot` | Standard Solana JSON-RPC |
+| `getBlock`, `getBlocks`, `getBlocksWithLimit`, `getBlockTime`, `getBlockHeight`, `getSlot`, `getTransactionCount`, `getLatestBlockhash`, `getFirstAvailableBlock`, `getInflationReward`, `getSignatureStatuses`, `minimumLedgerSlot` | Standard Solana JSON-RPC |
 | `getTransaction` | Standard, plus Triton's optional `slot` hint (`u64`): skips the ledger-wide signature search by querying that exact slot. The response is `null` if the signature isn't present in that slot |
 | `getSignaturesForAddress` | Standard, plus Triton's `beforeSlot`/`untilSlot` (`u64`): exclusive whole-slot bounds (`slot < beforeSlot`, `slot > untilSlot`), not signature-position cursors. `beforeSlot` can't be combined with `before`, nor `untilSlot` with `until` |
 | `getTransactionsForAddress` | Triton's extension: a complete address history in one call (ATAs included) with server-side filters (by status, slot, block time, and token accounts) and a pagination cursor |
